@@ -1,0 +1,78 @@
+.gradient-background {
+  width: 100%;
+  background: linear-gradient(to bottom right, #ffdab9, #e0ffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .announcement-banner {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    border-bottom: 2px solid black;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .diqqat {
+    display: inline-block;
+    transform: skewX(-10deg);
+    animation: scroll 10s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: darkslategray;
+  }
+
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+
+  .timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .cta-button {
+    background-color: yellow;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: gold;
+  }
+}

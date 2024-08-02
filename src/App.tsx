@@ -1,7 +1,24 @@
 import Layout from "./Layout/Layout";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+
+import "slick-carousel/slick/slick-theme.css";
 import "./assets/styles/main.css";
 import snow from "./assets/images/snow.svg";
+import vektor from "./assets/images/vector.svg";
+import Timer from "./Components/Timer";
 function App() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    className: "center",
+    centerMode: true,
+    centerPadding: "60px",
+    draggable: true,
+  };
   return (
     <Layout>
       <div className="second-section">
@@ -75,6 +92,50 @@ function App() {
           </p>
         </div>
       </div>
+      <div className="four-section">
+        <h3>Protez soch ustunliklari</h3>
+        <ul className="features-list">
+          <li className="features-list-item">
+            <img src={vektor} alt="vektor" />
+            <div>
+              <h4>Yoshartiradi</h4>
+              <span>Go’yoki 15 yilga yosharasiz </span>
+            </div>
+          </li>
+          <li className="features-list-item">
+            <img src={vektor} alt="vektor" />
+            <div>
+              <h4>Bosh kiyimsiz</h4>
+              <span>Bosh kiyim va kepkadan qutulasiz</span>
+            </div>
+          </li>
+          <li className="features-list-item">
+            <img src={vektor} alt="vektor" />
+            <div>
+              <h4>O’zingizga ishonch</h4>
+              <span>
+                To’y va marosimlarga o’zingizga ishongan xolda borasiz{" "}
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <Slider className="slider" {...settings}>
+        {[...Array(5)].map((i) => (
+          <iframe
+            className="small-slider-iframe"
+            key={i}
+            height="315"
+            src="https://www.youtube.com/embed/Fjbz-Rzmzxw?si=PEVHDTc7Eows7KAF"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        ))}
+      </Slider>
+      <Timer />
     </Layout>
   );
 }
