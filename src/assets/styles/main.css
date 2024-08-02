@@ -1,0 +1,232 @@
+@import url("./fonts");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0d0d0d;
+  font-family: "Mulish";
+}
+.header {
+  position: relative;
+  background-image: url("../images/ota.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50px;
+  height: 559px;
+}
+.bg-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.main-title {
+  font-size: 54px;
+  font-weight: bold;
+  line-height: 67.77px;
+  color: #ffffff;
+}
+.white-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30.12px;
+  color: #ffffff;
+}
+.header-right {
+  margin-left: auto;
+  max-width: 250px;
+}
+.header-right .text-white {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30.12px;
+  text-align: left;
+  color: #ffffff;
+}
+.user-name {
+  padding: 14px 20px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #fbbc04 0%, #fff1ca 100%);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 45.07px;
+  box-shadow: 0px 4px 15px 0px #fbbc0480;
+  border-radius: 20px 0 0 20px;
+  font-family: "Great Vibes";
+  transform: translateX(3vh);
+}
+
+.with-check-text {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.59px;
+  color: #fbbc04;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  background-color: #84919a;
+  transition: all linear 0.3s;
+}
+.with-check {
+  display: flex;
+  align-items: center;
+}
+.icon-check {
+  mask-image: url("../images/double_check.svg");
+  background-color: #fbbc04;
+  margin-right: 10px;
+  min-width: 20px;
+}
+.icon-ins {
+  mask-image: url("../images/ins.svg");
+  background-color: #000000;
+}
+.icon-tel {
+  mask-image: url("../images/tel.svg");
+  background-color: #000000;
+}
+.icon-phone {
+  mask-image: url("../images/phone.svg");
+  background-color: #000000;
+}
+.arrow-down {
+  mask-image: url("../images/arrow_down.svg");
+  background-color: #ffffff;
+}
+.header .socials {
+  transform: translateX(3vh);
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  margin-left: auto;
+  width: 64px;
+  margin-top: 52px;
+  padding-right: 28px;
+  position: relative;
+  z-index: 100;
+}
+.socials-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(90deg, #fbbc04 0%, #fff1ca 100%);
+  border-radius: 50px;
+}
+
+.info-section {
+  position: relative;
+  background: #000;
+}
+.snow {
+  width: 100%;
+  display: block;
+}
+.the-rest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 101;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15.06px;
+}
+.container {
+  width: 95vw;
+  margin: auto;
+}
+.second-section {
+  background-color: #fff;
+}
+.video-player-body {
+  display: flex;
+  align-items: center;
+}
+.video-player-wrapper {
+  position: relative;
+  transform: translatey(-50px);
+}
+.position-absolute {
+  position: absolute;
+  top: -10%;
+  right: 0;
+  height: 64px;
+  padding-right: 10px;
+}
+.video-player {
+  padding: 10px;
+}
+.video-player iframe {
+  width: 45vw;
+  border-radius: 12px;
+}
+.video-player-right {
+  padding-left: 16px;
+}
+.video-player-right h3 {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.59px;
+  text-align: left;
+  margin-bottom: 13px;
+}
+.video-player-right li {
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  text-align: left;
+  list-style-type: disc;
+}
+
+.please-text {
+  margin-top: 15px;
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.57px;
+  text-align: center;
+  max-width: 400px;
+}
+.third-section {
+  margin-top: -34px;
+}
+.third-section .nature {
+  padding: 16px;
+  background-color: #f5f4f4;
+}
+.third-section .nature.second {
+  background-color: #fff;
+}
+.third-section .nature h3 {
+  font-family: Mulish;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.59px;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.third-section .nature p {
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+}
