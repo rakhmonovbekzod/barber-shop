@@ -238,13 +238,22 @@ body {
 .third-section .nature.second {
   background-color: #fff;
 }
-.third-section .nature h3 {
+.four-section {
+  padding-top: 20px;
+  background-color: #fff;
+}
+.third-section .nature h3,
+.four-section h3 {
   font-family: Mulish;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 22.59px;
   text-align: left;
   margin-bottom: 6px;
+}
+
+.four-section h3 {
+  text-align: center;
 }
 .third-section .nature p {
   font-family: Mulish;
@@ -252,4 +261,48 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-align: left;
+}
+
+.features-list-item {
+  display: flex;
+  padding: 20px;
+}
+
+.features-list-item div {
+  margin-left: 10px;
+}
+.features-list-item:nth-child(2n) {
+  background-color: #e7e7e7;
+}
+.features-list-item h4 {
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.features-list-item span {
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 11.3px;
+  text-align: left;
+}
+
+.slick-slider {
+  background-color: #fff;
+  margin: 0 -10px;
+  padding: 20px 0;
+}
+
+.slick-slide {
+  background-color: #fff;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.slick-track {
+  display: flex;
 }
