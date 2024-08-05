@@ -19,7 +19,8 @@ body {
 }
 .bg-img {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
+  z-index: 20;
   left: 0;
   right: 0;
   width: 100%;
@@ -30,6 +31,14 @@ body {
   font-weight: bold;
   line-height: 67.77px;
   color: #ffffff;
+}
+@media screen and (max-width: 424px) {
+  .main-title {
+    font-size: 32px;
+  }
+  .the-rest {
+    transform: translatey(-25px) !important;
+  }
 }
 .white-text {
   font-size: 24px;
@@ -163,9 +172,10 @@ body {
   z-index: 101;
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 15.06px;
+  transform: translatey(-15px);
 }
 .container {
   max-width: 600px;
@@ -178,10 +188,7 @@ body {
 .second-section {
   background-color: #fff;
 }
-.video-player-body {
-  display: flex;
-  align-items: center;
-}
+
 .video-player-wrapper {
   position: relative;
   transform: translatey(-50px);
@@ -194,14 +201,17 @@ body {
   padding-right: 10px;
 }
 .video-player {
-  padding: 10px;
+  padding: 18px;
 }
 .video-player iframe {
-  width: 45vw;
+  width: 100%;
   border-radius: 12px;
 }
 .video-player-right {
-  padding-left: 16px;
+  padding: 0 15px;
+}
+.video-player-right .lists {
+  padding: 0 20px;
 }
 .video-player-right h3 {
   font-family: Mulish;
@@ -221,6 +231,7 @@ body {
 }
 
 .please-text {
+  padding: 0 15px;
   margin-top: 15px;
   font-family: Mulish;
   font-size: 14px;

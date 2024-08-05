@@ -1,4 +1,37 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+import { useRef, useState } from "react";
+import { toast } from "react-toastify";
+
 export const Footer = () => {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const numberRef = useRef<HTMLInputElement>();
+  const [isLoading, setIsLoading] = useState(false);
+  const sendData = (e: React.FormEvent) => {
+    const token = "7337937509:AAEkBDMVoXvkPS3LJpIBcoDAYeLnlIAw3b0";
+    const chatId = 675540976;
+    e.preventDefault();
+    setIsLoading(true);
+    fetch(`https://api.telegram.org/bot` + token + "/sendMessage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: {
+          userName: nameRef?.current?.value,
+          phoneNumber: numberRef?.current?.value,
+        },
+      }),
+    }).then(() => {
+      toast.success(
+        `Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bo'glanamiz`
+      );
+      setIsLoading(false);
+    });
+  };
   return (
     <div className="footer">
       <div className="section_wrapper">
@@ -14,16 +47,32 @@ export const Footer = () => {
               javob beraman 😊
             </p>
 
-            <form className="form">
+            <form
+              onSubmit={sendData}
+              className="form"
+              action="https://t.me/bekzodrakhmonovbot/Test"
+            >
               <span className="input_wrapper">
                 <span className="icon icon-user"></span>
-                <input type="text" placeholder="Ismingizni kiriting" />
+                <input
+                  ref={nameRef}
+                  required
+                  type="text"
+                  placeholder="Ismingizni kiriting"
+                />
               </span>
               <span className="input_wrapper">
                 <span className="icon icon-phone"></span>
-                <input type="tel" placeholder="Telefon raqamingizni kiriting" />
+                <input
+                  ref={numberRef}
+                  required
+                  type="tel"
+                  placeholder="Telefon raqamingizni kiriting"
+                />
               </span>
-              <button type="submit">Navbatga yozilish</button>
+              <button disabled={isLoading} type="submit">
+                {isLoading ? "...loading" : "Navbatga yozilish"}
+              </button>
             </form>
           </div>
         </div>

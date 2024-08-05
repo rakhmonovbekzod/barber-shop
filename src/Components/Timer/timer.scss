@@ -7,6 +7,7 @@
   justify-content: center;
   .announcement-banner {
     width: 100%;
+    max-width: 100vw;
     background-color: white;
     text-align: center;
     padding: 10px;
@@ -16,6 +17,15 @@
     border-bottom: 2px solid black;
     overflow: hidden;
     position: relative;
+    &.second-banner {
+      .diqqat {
+        animation: scroll2 10s linear infinite;
+      }
+    }
+    p {
+      display: flex;
+      gap: 25px;
+    }
   }
 
   .diqqat {
@@ -26,13 +36,20 @@
 
   @keyframes scroll {
     0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes scroll2 {
+    0% {
       transform: translateX(100%);
     }
     100% {
       transform: translateX(-100%);
     }
   }
-
   .content {
     text-align: center;
     padding: 20px;

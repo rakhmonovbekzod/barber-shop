@@ -19,13 +19,25 @@ export const Header = () => {
             </span>
           </div>
           <div className="socials">
-            <a href="#" className="socials-item">
+            <a
+              href="https://www.instagram.com/otabeksodiqov1"
+              target="_blank"
+              className="socials-item"
+            >
               <span className="icon icon-ins" />
             </a>
-            <a href="#" className="socials-item">
+            <a
+              href="https://t.me/OtabekSodiqov1"
+              target="_blank"
+              className="socials-item"
+            >
               <span className="icon icon-tel" />
             </a>
-            <a href="#" className="socials-item">
+            <a
+              href="tel:+998333194444"
+              target="_blank"
+              className="socials-item"
+            >
               <span className="icon icon-phone" />
             </a>
             <span className="icon arrow-down" />
