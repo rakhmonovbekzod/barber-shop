@@ -1,11 +1,12 @@
 @import url("./fonts");
+@import url("./footer"); 
 
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background: #0d0d0d;
+  /* background: #0d0d0d; */
   font-family: "Mulish";
 }
 .header {
@@ -91,12 +92,29 @@ body {
   mask-image: url("../images/ins.svg");
   background-color: #000000;
 }
+.icon-pen {
+  mask-image: url("../images/pen.svg");
+  background-color: #fff;
+}
+
+.icon-user {
+  mask-image: url("../images/user.svg");
+  background-color: #000000;
+  width: 30px;
+  height: 30px;
+}
 .icon-tel {
   mask-image: url("../images/tel.svg");
   background-color: #000000;
 }
 .icon-phone {
   mask-image: url("../images/phone.svg");
+  background-color: #000000;
+  width: 30px;
+  height: 30px;
+}
+.icon-phone2 {
+  mask-image: url("../images/phone2.svg");
   background-color: #000000;
 }
 .arrow-down {
@@ -149,8 +167,12 @@ body {
   line-height: 15.06px;
 }
 .container {
-  width: 95vw;
-  margin: auto;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
 }
 .second-section {
   background-color: #fff;
