@@ -12,19 +12,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      const prices = [7, 1, 5, 3, 6, 4];
-      var maxProfit = function (prices = []) {
-        let output = 0;
-        prices.reduce((prev, next) => {
-          if (prev < next) {
-            output += next - prev;
-          }
-          return next;
-        });
-        return output;
-      };
-      console.log(maxProfit(prices));
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
