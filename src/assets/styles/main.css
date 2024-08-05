@@ -1,5 +1,6 @@
 @import url("./fonts");
-@import url("./footer");
+/* style for footer section */
+@import url("./footer"); 
 
 * {
   margin: 0;
