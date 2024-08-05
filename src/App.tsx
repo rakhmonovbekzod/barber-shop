@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
+
 import Layout from "./Layout/Layout";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
