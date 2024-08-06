@@ -230,6 +230,11 @@ body {
   list-style-type: disc;
 }
 
+#root {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .please-text {
   padding: 0 15px;
   margin-top: 15px;
@@ -317,4 +322,25 @@ body {
 
 .slick-track {
   display: flex;
+}
+
+.slick-arrow.slick-prev {
+  left: 11%;
+}
+.slick-arrow.slick-next {
+  right: 11%;
+}
+.slick-arrow.slick-prev::before {
+  color: #000;
+}
+.slick-arrow.slick-prev::before {
+  color: #000;
+}
+
+.chakra-modal__header {
+  padding: 10px 20px !important;
+  padding-bottom: 0 !important;
+}
+.chakra-modal__content {
+  width: 85vw !important;
 }

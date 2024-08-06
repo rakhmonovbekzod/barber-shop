@@ -1,12 +1,20 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
+import {
+  Modal,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+} from "@chakra-ui/modal";
+import { Heading, Stack } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import { toast } from "react-toastify";
 
 export const Footer = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const numberRef = useRef<HTMLInputElement>();
   const [isLoading, setIsLoading] = useState(false);
+  const [show, setShow] = useState();
   const sendData = (e: React.FormEvent) => {
     const token = "7337937509:AAEkBDMVoXvkPS3LJpIBcoDAYeLnlIAw3b0";
     const chatId = 675540976;
@@ -26,14 +34,31 @@ export const Footer = () => {
         },
       }),
     }).then(() => {
-      toast.success(
-        `Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bo'glanamiz`
-      );
+      setShow(true);
+      setTimeout(() => {
+        setShow(false);
+      }, 2500);
+
       setIsLoading(false);
     });
   };
   return (
     <div className="footer">
+      <Modal isOpen={show} size="xl" isCentered motionPreset="slideInBottom">
+        <ModalOverlay
+          bg="blackAlpha.300"
+          backdropFilter="blur(10px) hue-rotate(90deg)"
+        />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <Stack style={{ padding: 20 + "px" }} spacing={6}>
+            <Heading as="h4" size="md">
+              Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bo'glanamiz
+            </Heading>
+          </Stack>
+        </ModalContent>
+      </Modal>
       <div className="section_wrapper">
         <div className="container">
           <div className="contacts_section">

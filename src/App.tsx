@@ -10,6 +10,7 @@ import "./assets/styles/main.css";
 import snow from "./assets/images/snow.svg";
 import vektor from "./assets/images/vector.svg";
 import Timer from "./Components/Timer";
+import { ChakraProvider } from "@chakra-ui/react";
 function App() {
   const settings = {
     dots: true,
@@ -22,8 +23,14 @@ function App() {
     centerPadding: "60px",
     draggable: true,
   };
+
+  const links = [
+    "K1XZ25U8m_8?si=X3DbBrpViFObVYzZ",
+    "1lNzmq70gg4?si=WCnJtQfmLKieV_wS",
+    "EjlqSjq4czA?si=GUWRJVCsjUCOY1cl",
+  ];
   return (
-    <>
+    <ChakraProvider>
       <Layout>
         <div className="second-section">
           <div className="info-section">
@@ -43,7 +50,7 @@ function App() {
               <div className="video-player">
                 <iframe
                   height="315"
-                  src="https://www.youtube.com/embed/Fjbz-Rzmzxw?si=PEVHDTc7Eows7KAF"
+                  src="https://www.youtube.com/embed/4ioL5N3gPRQ?si=kHSXjEhIVaIkNtX_"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -129,12 +136,12 @@ function App() {
           </ul>
         </div>
         <Slider className="slider" {...settings}>
-          {[...Array(5)].map((i) => (
+          {links?.map((i) => (
             <iframe
               className="small-slider-iframe"
               key={i}
               height="315"
-              src="https://www.youtube.com/embed/Fjbz-Rzmzxw?si=PEVHDTc7Eows7KAF"
+              src={"https://www.youtube.com/embed/" + i}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -145,7 +152,7 @@ function App() {
         </Slider>
         <Timer />
       </Layout>
-    </>
+    </ChakraProvider>
   );
 }
 

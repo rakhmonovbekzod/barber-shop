@@ -37,7 +37,8 @@ function Timer() {
             {currentTime.getHours() + ":"}
             {Number(currentTime.getMinutes()) > 10
               ? currentTime.getMinutes()
-              : "0" + currentTime.getMinutes() + ":"}
+              : "0" + currentTime.getMinutes()}
+            :
             {Number(currentTime.getSeconds()) > 10
               ? currentTime.getSeconds()
               : "0" + currentTime.getSeconds()}
