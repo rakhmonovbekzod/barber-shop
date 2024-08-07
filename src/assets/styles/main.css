@@ -58,25 +58,27 @@ body {
   color: #ffffff;
 }
 .user-name {
-  padding: 14px 20px;
+  padding: 10px 16px;
   margin-top: 18px;
   margin-bottom: 12px;
   background: linear-gradient(90deg, #fbbc04 0%, #fff1ca 100%);
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 45.07px;
   box-shadow: 0px 4px 15px 0px #fbbc0480;
   border-radius: 20px 0 0 20px;
   font-family: "Great Vibes";
-  transform: translateX(3vh);
+  transform: translateX(12vh);
+  width: max-content;
 }
 
 .with-check-text {
   display: inline-block;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 22.59px;
   color: #fbbc04;
+  width: 120px;
 }
 
 .icon {
@@ -90,7 +92,9 @@ body {
 }
 .with-check {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  margin-left: auto;
 }
 .icon-check {
   mask-image: url("../images/double_check.svg");
@@ -134,6 +138,7 @@ body {
 .header .socials {
   transform: translateX(3vh);
 }
+
 .socials {
   display: flex;
   flex-direction: column;
@@ -154,6 +159,19 @@ body {
   height: 64px;
   background: linear-gradient(90deg, #fbbc04 0%, #fff1ca 100%);
   border-radius: 50px;
+  position: relative;
+  animation: lightSpeedIn 2.2s ease-in-out infinite;
+}
+.socials-item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: pulse 1.2s ease infinite;
+  background: linear-gradient(90deg, #fbbc04 0%, #fff1ca 100%);
+  border-radius: 50%;
 }
 
 .info-section {
@@ -176,6 +194,8 @@ body {
   font-weight: 700;
   line-height: 15.06px;
   transform: translatey(-15px);
+  text-transform: uppercase;
+  animation: blur 2s ease infinite;
 }
 .container {
   max-width: 600px;
@@ -218,7 +238,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 22.59px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 13px;
 }
 .video-player-right li {
@@ -265,7 +285,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 22.59px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 6px;
 }
 
@@ -278,6 +298,7 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-align: left;
+  text-indent: 20px;
 }
 
 .features-list-item {
@@ -323,8 +344,10 @@ body {
 .slick-track {
   display: flex;
 }
-
-.slick-arrow.slick-prev {
+.slick-arrow {
+  display: none;
+}
+/* .slick-arrow.slick-prev {
   left: 11%;
 }
 .slick-arrow.slick-next {
@@ -335,7 +358,7 @@ body {
 }
 .slick-arrow.slick-prev::before {
   color: #000;
-}
+} */
 
 .chakra-modal__header {
   padding: 10px 20px !important;
@@ -343,4 +366,47 @@ body {
 }
 .chakra-modal__content {
   width: 85vw !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedIn {
+  0% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: translateX(0%) skewX(0deg);
+  }
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #e7d409, 0px 0px 10px #d8bf05,
+      0px 0px 25px #ecf400, 0px 0px 25px #d49205, 0px 0px 25px #dcb002,
+      0px 0px 25px #d2b302, 0px 0px 25px #dfab01, 0px 0px 25px #e7c800,
+      0px 0px 50px #ffee00, 0px 0px 50px #ebc401, 0px 0px 50px #ebd804,
+      0px 0px 150px #ecd401, 0px 10px 100px #faea04, 0px 10px 100px #edea05,
+      0px 10px 100px #ffea02, 0px 10px 100px #ecdd00, 0px -10px 100px #eade00,
+      0px -10px 100px #fbf700;
+  }
 }

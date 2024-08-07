@@ -6,8 +6,11 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="main-layout">
       <Header />
+
       {children}
-      <Footer />
+      <div>
+        <Footer data-aos="zoom-in-up" />
+      </div>
     </div>
   );
 };

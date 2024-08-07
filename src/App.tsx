@@ -21,6 +21,7 @@ function App() {
     className: "center",
     centerMode: true,
     centerPadding: "60px",
+    autoplay: true,
     draggable: true,
   };
 
@@ -32,7 +33,7 @@ function App() {
   return (
     <ChakraProvider>
       <Layout>
-        <div className="second-section">
+        <div className="second-section ">
           <div className="info-section">
             <img className="snow" src={snow} alt="img" />
           </div>
@@ -80,7 +81,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="third-section">
+        <div className="third-section " data-aos="fade-up">
           <div className="nature">
             <h3>Natural mahsulot</h3>
             <p>
@@ -107,7 +108,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="four-section">
+        <div className="four-section" data-aos="fade-down">
           <h3>Protez soch ustunliklari</h3>
           <ul className="features-list">
             <li className="features-list-item">
@@ -135,7 +136,7 @@ function App() {
             </li>
           </ul>
         </div>
-        <Slider className="slider" {...settings}>
+        <Slider className="slider" {...settings} data-aos="fade-right">
           {links?.map((i) => (
             <iframe
               className="small-slider-iframe"
@@ -150,7 +151,9 @@ function App() {
             ></iframe>
           ))}
         </Slider>
-        <Timer />
+        <div data-aos="fade-left">
+          <Timer />
+        </div>
       </Layout>
     </ChakraProvider>
   );

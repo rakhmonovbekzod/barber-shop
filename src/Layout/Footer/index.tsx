@@ -1,13 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
-import {
-  Modal,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-} from "@chakra-ui/modal";
-import { Heading, Stack } from "@chakra-ui/react";
+import { Modal, ModalContent, ModalOverlay } from "@chakra-ui/modal";
+import { Alert, AlertIcon, Heading, Stack } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 
 export const Footer = () => {
@@ -37,7 +31,7 @@ export const Footer = () => {
       setShow(true);
       setTimeout(() => {
         setShow(false);
-      }, 2500);
+      }, 7000);
 
       setIsLoading(false);
     });
@@ -45,16 +39,15 @@ export const Footer = () => {
   return (
     <div className="footer">
       <Modal isOpen={show} size="xl" isCentered motionPreset="slideInBottom">
-        <ModalOverlay
-          bg="blackAlpha.300"
-          backdropFilter="blur(10px) hue-rotate(90deg)"
-        />
+        <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
           <Stack style={{ padding: 20 + "px" }} spacing={6}>
             <Heading as="h4" size="md">
-              Sizning so'rovingiz qabul qilindi. Tez orada siz bilan bo'glanamiz
+              <Alert status="success">
+                <AlertIcon />
+                Rahmat navbatga yozildingiz .Siz bilan tez orada bog'lanaman.
+                Tanlovingiz uchun rahmat!
+              </Alert>
             </Heading>
           </Stack>
         </ModalContent>
@@ -72,15 +65,12 @@ export const Footer = () => {
               javob beraman 😊
             </p>
 
-            <form
-              onSubmit={sendData}
-              className="form"
-              action="https://t.me/bekzodrakhmonovbot/Test"
-            >
+            <form onSubmit={sendData} className="form" id="form">
               <span className="input_wrapper">
                 <span className="icon icon-user"></span>
                 <input
                   ref={nameRef}
+                  className="name-input"
                   required
                   type="text"
                   placeholder="Ismingizni kiriting"
@@ -108,7 +98,7 @@ export const Footer = () => {
             Ushbu manzildan bizni oson topib kelasiz
           </p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.2695600497407!2d69.21064009711158!3d41.29918016034636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8a99a44d99%3A0x3914c7b23096e8fe!2sOq%20tepa%20krug!5e0!3m2!1sen!2s!4v1722601197255!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14259.40541598045!2d69.1994172005188!3d41.2942702581759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d41.2995424!2d69.21329879999999!4m5!1s0x38ae8bcbcbdcb1c5%3A0x6a2bf375d29942b6!2s76X7%2B82Q%2C%20100096%2C%20Tashkent!3m2!1d41.2984061!2d69.2126816!5e0!3m2!1sen!2s!4v1723038371308!5m2!1sen!2s"
             width={"100%"}
             height="350"
             style={{ border: 0 }}
