@@ -44,19 +44,6 @@ function Timer() {
               : "0" + currentTime.getSeconds()}
           </span>
         </div>
-        <button
-          className="cta-button"
-          onClick={() => {
-            const element = document.getElementById("form");
-            element.scrollIntoView({
-              behavior: "smooth",
-              block: "end",
-            });
-            document?.querySelector(".name-input")?.focus();
-          }}
-        >
-          Navbatga yozilish
-        </button>
       </div>
       <div className="announcement-banner second-banner">
         <div className="diqqat">

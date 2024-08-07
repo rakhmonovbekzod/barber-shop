@@ -33,6 +33,19 @@ function App() {
   return (
     <ChakraProvider>
       <Layout>
+        <button
+          className="cta-button"
+          onClick={() => {
+            const element = document.getElementById("form");
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "end",
+            });
+            document?.querySelector(".name-input")?.focus();
+          }}
+        >
+          Navbatga yozilish
+        </button>
         <div className="second-section ">
           <div className="info-section">
             <img className="snow" src={snow} alt="img" />
