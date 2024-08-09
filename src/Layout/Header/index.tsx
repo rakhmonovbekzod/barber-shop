@@ -33,17 +33,20 @@ export const Header = () => {
             >
               <span className="icon icon-tel" />
             </a>
-            <a
-              href="tel:+998333194444"
-              target="_blank"
-              className="socials-item"
-            >
-              <span className="icon icon-phone" />
-            </a>
-            <span className="icon arrow-down" />
+
+            <span
+              onClick={() => {
+                const element = document.getElementById("second-section");
+                element?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "end",
+                  inline: "nearest",
+                });
+              }}
+              className="icon arrow-down"
+            />
           </div>
         </div>
-        <span className="white-text the-rest">Davomi👇</span>
       </div>
     </header>
   );

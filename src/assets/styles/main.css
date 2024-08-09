@@ -19,7 +19,7 @@ body {
 }
 .bg-img {
   position: absolute;
-  bottom: -1px;
+  bottom: -15px;
   z-index: 20;
   left: 0;
   right: 0;
@@ -31,6 +31,7 @@ body {
   font-weight: bold;
   line-height: 67.77px;
   color: #ffffff;
+  text-align: center;
 }
 @media screen and (max-width: 424px) {
   .main-title {
@@ -68,7 +69,7 @@ body {
   box-shadow: 0px 4px 15px 0px #fbbc0480;
   border-radius: 20px 0 0 20px;
   font-family: "Great Vibes";
-  transform: translateX(12vh);
+  transform: translateX(35%);
   width: max-content;
 }
 
@@ -288,6 +289,15 @@ body {
   text-align: center;
   margin-bottom: 6px;
 }
+.proto-title h3 {
+  border-top: 1px solid #000;
+  padding-top: 15px;
+  font-family: Mulish;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22.59px;
+  text-align: center;
+}
 
 .four-section h3 {
   text-align: center;
@@ -409,4 +419,44 @@ body {
       0px 10px 100px #ffea02, 0px 10px 100px #ecdd00, 0px -10px 100px #eade00,
       0px -10px 100px #fbf700;
   }
+}
+
+.phone-number-button {
+  position: relative;
+  background: green !important;
+}
+
+.phone-number-button .icon-phone {
+  background-color: #fff;
+}
+
+.phone-number-button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: pulse 1.2s ease infinite;
+  background: green !important;
+  border-radius: 50%;
+}
+.fixed-div {
+  z-index: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  border-radius: 10px 10px 0px 0;
+}
+
+#root {
+  margin-bottom: 88px;
 }

@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./assets/styles/main.css";
 import snow from "./assets/images/snow.svg";
 import vektor from "./assets/images/vector.svg";
+import PHOTO from "./assets/images/kal.jpg";
 import Timer from "./Components/Timer";
 import { ChakraProvider } from "@chakra-ui/react";
 function App() {
@@ -33,34 +34,34 @@ function App() {
   return (
     <ChakraProvider>
       <Layout>
-        <button
-          className="cta-button"
-          onClick={() => {
-            const element = document.getElementById("form");
-            element.scrollIntoView({
-              behavior: "smooth",
-              block: "end",
-            });
-            document?.querySelector(".name-input")?.focus();
-          }}
-        >
-          Navbatga yozilish
-        </button>
-        <div className="second-section ">
+        <div className="fixed-div">
+          <a
+            className="socials-item phone-number-button"
+            href="tel:333194444"
+            target="_blank"
+          >
+            <span className="icon icon-phone" />
+          </a>
+          <button
+            className="cta-button"
+            onClick={() => {
+              const element = document.getElementById("form");
+              element.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+              });
+              document?.querySelector(".name-input")?.focus();
+            }}
+          >
+            Navbatga yozilish
+          </button>
+        </div>
+        <div className="second-section " id="second-section">
           <div className="info-section">
             <img className="snow" src={snow} alt="img" />
           </div>
           <div className="video-player-wrapper">
             <div className="video-player-body">
-              <div className="socials position-absolute">
-                <a
-                  className="socials-item"
-                  href="tel:+998333194444"
-                  target="_blank"
-                >
-                  <span className="icon icon-phone" />
-                </a>
-              </div>
               <div className="video-player">
                 <iframe
                   height="315"
@@ -149,6 +150,11 @@ function App() {
             </li>
           </ul>
         </div>
+
+        <div className="proto-title">
+          <h3>Protez soch qo’yish jaryonidan video lavhalar</h3>
+        </div>
+
         <Slider className="slider" {...settings} data-aos="fade-right">
           {links?.map((i) => (
             <iframe
@@ -164,6 +170,25 @@ function App() {
             ></iframe>
           ))}
         </Slider>
+        <div
+          className="photo-section video-player"
+          style={{ backgroundColor: "#000" }}
+        >
+          <img className="img" alt="PHOTO" src={PHOTO} />
+          <p
+            className="white-text"
+            style={{
+              fontSize: 16 + "px",
+              lineHeight: 21 + "px",
+              textAlign: "center",
+              marginTop: 10 + "px",
+            }}
+          >
+            Iltimos telegramdan shunday ko’rinishda boshingizni rasmga olib
+            +99833-319-4444 ga yuboring, ko’rib narxini xisoblabberaman albatta
+            30% lik chegirmasi bor😊
+          </p>
+        </div>
         <div data-aos="fade-left">
           <Timer />
         </div>

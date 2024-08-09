@@ -10,8 +10,8 @@ export const Footer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState();
   const sendData = (e: React.FormEvent) => {
-    const token = "7337937509:AAEkBDMVoXvkPS3LJpIBcoDAYeLnlIAw3b0";
-    const chatId = 675540976;
+    const token = "7394657415:AAEjr_jY-ro6guKbSUNlocrvGWvHES1ASu4";
+    const chatId = 6155125987;
     e.preventDefault();
     setIsLoading(true);
     fetch(`https://api.telegram.org/bot` + token + "/sendMessage", {
@@ -32,7 +32,7 @@ export const Footer = () => {
       setTimeout(() => {
         setShow(false);
       }, 7000);
-
+      document.querySelectorAll("input").forEach((input) => (input.value = ""));
       setIsLoading(false);
     });
   };
@@ -45,8 +45,9 @@ export const Footer = () => {
             <Heading as="h4" size="md">
               <Alert status="success">
                 <AlertIcon />
-                Rahmat navbatga yozildingiz .Siz bilan tez orada bog'lanaman.
-                Tanlovingiz uchun rahmat!
+                So’rovnoma qabul qilindi 24 soat ichida siz bilan bog’lanaman
+                iltimos telefoningizga axamyatli bo’ling Tanlovingiz uchun
+                raxmat😊🤝
               </Alert>
             </Heading>
           </Stack>
@@ -73,6 +74,7 @@ export const Footer = () => {
                   className="name-input"
                   required
                   type="text"
+                  minLength={5}
                   placeholder="Ismingizni kiriting"
                 />
               </span>
@@ -82,6 +84,8 @@ export const Footer = () => {
                   ref={numberRef}
                   required
                   type="tel"
+                  minLength={7}
+                  maxLength={15}
                   placeholder="Telefon raqamingizni kiriting"
                 />
               </span>
@@ -93,7 +97,14 @@ export const Footer = () => {
         </div>
 
         <div className="address_section">
-          <p className="address_title">Bizning manzil</p>
+          <p className="address_title">
+            Bizning manzil:
+            <br />
+            <small>
+              Toshkent shaxar Chilonzor tumani 7-kvartal Moljal Pedagokika
+              kolleji roparasi SHEDEVR BEAUTY STUDYO
+            </small>
+          </p>
           <p className="address_desc">
             Ushbu manzildan bizni oson topib kelasiz
           </p>
