@@ -94,12 +94,13 @@
 
 .cta-button {
   position: relative;
-  background-color: green;
-  color: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #fbbc04, #fff1ca);
+  color: rgb(10, 10, 10);
   padding: 12px 30px;
   border: none;
   border-radius: 12px;
   font-size: 18px;
+  box-shadow: 0 4px 15px #fbbc0480;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 1000;
@@ -113,6 +114,6 @@
   content: "";
   position: absolute;
   animation: pulse2 1.2s ease infinite;
-  background-color: green;
+  background-color: #fbbc04;
   border-radius: 12px;
 }
