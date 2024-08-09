@@ -93,6 +93,7 @@ input[type="tel"] {
   text-align: center;
   color: #fff;
   margin-bottom: 12px;
+  padding: 0 10px;
 }
 
 .address_desc {
