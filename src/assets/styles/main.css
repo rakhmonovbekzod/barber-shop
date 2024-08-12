@@ -388,10 +388,10 @@ body {
   border-radius: 50%;
 }
 .slick-arrow.slick-prev {
-  left: 9%;
+  left: 15px;
 }
 .slick-arrow.slick-next {
-  right: 9%;
+  right: 25px;
 }
 .slick-arrow.slick-prev::before {
   position: absolute;
