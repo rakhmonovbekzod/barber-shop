@@ -36,7 +36,11 @@ function App() {
     <ChakraProvider>
       <Layout>
         <div className="fixed-div">
-          <a className="socials-item phone-number-button" href="tel:333194444">
+          <a
+            className="socials-item phone-number-button"
+            href="tel:333194444"
+            target="_blank"
+          >
             <span className="icon icon-phone" />
           </a>
           <a
