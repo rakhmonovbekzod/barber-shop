@@ -18,22 +18,7 @@ export const Header = () => {
               Protez soch bo’yicha katta bilim va tajriba
             </span>
           </div>
-          <div className="socials">
-            <a
-              href="https://www.instagram.com/otabeksodiqov1"
-              target="_blank"
-              className="socials-item"
-            >
-              <span className="icon icon-ins" />
-            </a>
-            <a
-              href="https://t.me/OtabekSodiqov1"
-              target="_blank"
-              className="socials-item"
-            >
-              <span className="icon icon-tel" />
-            </a>
-
+          {/* <div className="socials">
             <span
               onClick={() => {
                 const element = document.getElementById("second-section");
@@ -45,7 +30,7 @@ export const Header = () => {
               }}
               className="icon arrow-down"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

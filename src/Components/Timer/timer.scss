@@ -96,15 +96,31 @@
   position: relative;
   background: linear-gradient(90deg, #fbbc04, #fff1ca);
   color: rgb(10, 10, 10);
-  padding: 12px 30px;
+  padding: 12px 20px;
   border: none;
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 15px;
   box-shadow: 0 4px 15px #fbbc0480;
   cursor: pointer;
   transition: background-color 0.3s ease;
   z-index: 1000;
   font-weight: bold;
+}
+@media screen and (max-width: 357px) {
+  .cta-button {
+    padding: 12px 12px;
+    font-size: 14px;
+  }
+  .icon-phone,
+  .icon-ins {
+    width: 22px;
+    height: 22px;
+  }
+  .phone-number-button,
+  .instagram {
+    width: 54px;
+    height: 54px;
+  }
 }
 .cta-button::before {
   top: 0;

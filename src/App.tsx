@@ -11,6 +11,7 @@ import snow from "./assets/images/snow.svg";
 import vektor from "./assets/images/vector.svg";
 import PHOTO from "./assets/images/kal.jpg";
 import Timer from "./Components/Timer";
+import telegram from "./assets/images/tel.svg";
 import { ChakraProvider } from "@chakra-ui/react";
 function App() {
   const settings = {
@@ -37,6 +38,13 @@ function App() {
         <div className="fixed-div">
           <a className="socials-item phone-number-button" href="tel:333194444">
             <span className="icon icon-phone" />
+          </a>
+          <a
+            href="https://www.instagram.com/otabeksodiqov1"
+            target="_blank"
+            className="socials-item instagram"
+          >
+            <span className="icon icon-ins" />
           </a>
           <button
             className="cta-button"
@@ -174,15 +182,24 @@ function App() {
           <p
             className="white-text"
             style={{
-              fontSize: 16 + "px",
+              fontSize: 15 + "px",
               lineHeight: 21 + "px",
               textAlign: "center",
               marginTop: 10 + "px",
+              position: "relative",
+              maxWidth: "85" + "%",
             }}
           >
             Iltimos telegramdan shunday ko’rinishda boshingizni rasmga olib
             +99833-319-4444 ga yuboring, ko’rib narxini xisoblabberaman albatta
             30% lik chegirmasi bor😊
+            <a
+              href="https://t.me/OtabekSodiqov1"
+              target="_blank"
+              className="socials-item tel"
+            >
+              <img src={telegram} alt="telegram" />
+            </a>
           </p>
         </div>
         <div data-aos="fade-left">
