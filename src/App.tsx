@@ -38,8 +38,7 @@ function App() {
         <div className="fixed-div">
           <a
             className="socials-item phone-number-button"
-            href="tel:333194444"
-            target="_blank"
+            href="tel:+998333194444"
           >
             <span className="icon icon-phone" />
           </a>
