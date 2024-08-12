@@ -90,7 +90,7 @@ export const Footer = () => {
                 />
               </span>
               <button disabled={isLoading} type="submit">
-                {isLoading ? "...Yuborilmoqda" : "Navbatga yozilish"}
+                {isLoading ? "...Yuborilmoqda" : "Yuborish"}
               </button>
             </form>
           </div>
