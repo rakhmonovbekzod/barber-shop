@@ -23,7 +23,6 @@ function App() {
     className: "center",
     centerMode: true,
     centerPadding: "60px",
-    autoplay: true,
     draggable: true,
   };
 
@@ -159,7 +158,7 @@ function App() {
         </div>
 
         <div className="proto-title">
-          <h3>Protez soch qo’yish jaryonidan video lavhalar</h3>
+          <h3>Protez soch qo’yish jarayonidan video lavhalar</h3>
         </div>
 
         <Slider className="slider" {...settings} data-aos="fade-right">
